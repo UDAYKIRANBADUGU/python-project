@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UK Friend</title>
+    
+    <style>
+
+/* GENERAL */
+
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #fafafa;
+}
+
+/* LOGIN PAGE */
+
+.login-box {
+    width: 300px;
+    margin: 120px auto;
+    background: white;
+    padding: 40px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #3897f0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* HOME PAGE */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.feed {
+    width: 500px;
+}
+
+.stories {
+    display: flex;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+}
+
+.story {
+    text-align: center;
+    margin-right: 15px;
+}
+
+.story img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.post {
+    background: white;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.post img {
+    width: 100%;
+}
+
+.sidebar {
+    margin-left: 40px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+/* HIDE HOME PAGE INITIALLY */
+
+#homePage {
+    display: none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- LOGIN PAGE -->
+
+<div id="loginPage">
+    <div class="login-box">
+        
+        <h2>UK Friend</h2>
+        
+        <form onsubmit="loginUser(event)">
+            
+            <input type="text" placeholder="Username" required>
+            
+            <input type="password" placeholder="Password" required>
+            
+            <button type="submit">Log In</button>
+        
+        </form>
+        
+        <div class="divider">
+            <span>OR</span>
+
+        </div>
+
+        <a href="#" class="forgot">
+            Forgot password?
+        </a>
+
+    </div>
+
+     <div class="signup-box">
+        Don't have an account?
+        <a href="#">Sign up</a>
+
+    </div>
+
+    </div>
+
+
+
+<!-- HOME PAGE -->
+
+<div id="homePage">
+
+<div class="navbar">
+
+<h2>UK Friend</h2>
+
+<div>
+
+🏠 💬 ➕ ❤️ 👤
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+
+<div class="feed">
+
+
+<div class="stories">
+
+<div class="story">
+<img src="https://i.pravatar.cc/60?img=1">
+<p>User1</p>
+</div>
+
+<div class="story">
+<img src="https://i.pravatar.cc/60?img=2">
+<p>User2</p>
+</div>
+
+<div class="story">
+<img src="https://i.pravatar.cc/60?img=3">
+<p>User3</p>
+</div>
+
+</div>
+
+
+
+<div class="post">
+
+<h4 style="padding:10px;">user_1</h4>
+
+<img src="https://picsum.photos/500/400">
+
+<div style="padding:10px;">
+
+❤️ 💬 📤
+
+</div>
+
+</div>
+
+
+
+<div class="post">
+
+<h4 style="padding:10px;">user_2</h4>
+
+<img src="https://picsum.photos/500/401">
+
+<div style="padding:10px;">
+
+❤️ 💬 📤
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="sidebar">
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/60">
+
+<div>
+
+<b>Your Name</b>
+
+<p>View Profile</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function loginUser(event)
+{
+    event.preventDefault();
+
+    // hide login page
+    document.getElementById("loginPage").style.display = "none";
+
+    // show homepage
+    document.getElementById("homePage").style.display = "block";
+}
+
+</script>
+
+
+</body>
+</html>
